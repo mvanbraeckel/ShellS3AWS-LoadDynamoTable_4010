@@ -1,5 +1,5 @@
 # ShellS3AWS-LoadDynamoTable_4010
-Uses Python3 Boto3 to create a "shell" for interacting with and managing AWS S3 buckets. Also, a second part uses the same language and library to create, load, and manipulate DynamoDB tables (Cloud Computing course A1)
+Creates a CLI "shell" for interacting with and managing AWS S3 buckets, and a second part can be run to create, load, and manipulate DynamoDB tables. CLI AWS S3 Shell Program + AWS DynamoDB Load and Scan/Query Tables (Cloud Computing course A1)
 
 # Info
 
