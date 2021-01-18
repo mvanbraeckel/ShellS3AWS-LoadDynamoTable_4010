@@ -1,0 +1,40 @@
+Assignment feedback for: Van Braeckel Mitchell
+
+
+Total: 57/60
+
+Part 1: 28/30
+
+Commands: 15/16
+Extras: 1/4
+Errors: 5/5
+Clean Code: 5/5
+
+
+
+Part 2: 29/30
+
+
+Loading: 4/4
+CLI: 4/4
+Complete: 10/11
+Errors: 5/5
+Clean Code: 6/6
+
+
+Feed back:
+
+"graded using commit `5a14d1dee`. All of your programs are very well documented. Mkbucket ma-test-45 fails. Ls in a subdir prints the whole path from the root of the bucket, this is not the desired behavior. The dynamodb programs handled all the errors I gave it. "
+
+====
+regrade comments
+====
+
+took off 0.5 marks for mkbucket not working with a - character
+gave you one more mark for the ls -l functionality in a bucket.
+
+
+Best regards,
+Marshall Asch
+
+- Good luck on the rest of the assignments :)

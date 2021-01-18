@@ -1,0 +1,21 @@
+More Information about the Assignment
+
+Information on client versus resource for boto3: Client versus Resource
+Good source of information on object names: https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html
+	Impact: best practice would be to only allow safe characters in object names
+Information on credentials: https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html
+	I think that educational accounts are treated as temporary accounts and so there are more barriers to establishing credentials.  You have to add a session token to your config.ini file but your code will be tested using a regular account and so I will supply the config.ini to be used.
+While you should try to emulate an *nix shell as much as you can you have to take into account the limitations of S3 - it is an object store not a file system.  So you have to take these limitations into account and you might restrict things like names.  This also applies to the metadata about object and buckets - obviously you can only use what S3 provides (which might not be what most file systems provide).
+	Impact: content-types for objects
+Note on errors: use the usual behaviour of *nix shells to dictate what your commands can do and not do, e.g. rmdir fails if directory is not empty.  
+The assignment specifies what flags are required for commands, e.g. ls -l.  If the flag has not been specified in the assignment description then it is not required.
+	Impact: extra flags that function correctly will be rewarded
+Absolute pathnames for objects are: s3:/bucketName/<object name, including "directories"> but you can also use relative pathnames, i.e. if you have a "directory" structure such as level1/levelA/myObjects/ and your pwd is levelA then you can reference an object in the myObjects directory as "myObjects/objA".
+
+Here is a great question from Keefer:
+"For upload and download, how are local file paths supposed to be resolved? Can we expect them to always be an absolute path? Should we try to resolve incomplete paths from the working directory that the python script was started in? Should these local paths also always be entered as a posix-like path, or should they use the OS-native path style?"
+Answer: You can specify the local file path either as an absolute path or a relative one based on the Python script's working directory.  The local paths should use the Posix structure.
+
+Here is a great question from Daniel G:
+"Do we throw an error for cd .. when the path is s3:/? (or any other path combo that goes "above" the root folder like cd ~/../), or do the UNIX-y implementation and stay at s3:/?"
+Answer:  Just stay at s3:/ (no error message) like *nix shells do.

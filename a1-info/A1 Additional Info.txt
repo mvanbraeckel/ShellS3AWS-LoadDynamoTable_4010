@@ -1,0 +1,26 @@
+More Answers to Questions...
+
+Part 1
+
+- For working with directories you are required for the base marks to do things either in the current working directory (ls shows the contents of the current working directory) or for some commands like cd you need to handle changing to the root directory (~), the directory that is immediately accessible from your pwd and the previous directory (..).
+- Extra grades will be given for any of the commands that can accept either absolute paths or relative paths beyond what is specified, e.g. if you are in directory dir1 (in bucket "stuff") and it has directories dir1a and dir1b and dir1a has directory dir1aa:
+
+       stuff
+          |
+        dir1
+          |
+       ------
+      |         |
+  dir1a  dir1b
+      |
+  dir1aa
+
+- You must be able to do the following command: if you are in dir1 then "cd dir1a or cd dir1b" as per the basic requirements but you will get "extra" for being able to do "cd dir1a/dir1aa". You will also get extra for an absolute path like "cd s3:/stuff/dir1/dir1a/dir1aa" from wherever you currently are.
+- This relative versus absolute path also applies to commands such as upload, download, and cp. 
+
+Part 2
+
+- there is no login required for Part 2 - the .aws info is used
+- the name for the Python program to load tables is now in the updated Assignment description and is loadTable.py
+- you can have a separate load program for encodings,csv
+- for the query program - the only free variable is commodity but you have to retrieve all variables that are in the northamerica table (there will be other variables in the other 3 tables that do not appear in the northamerica table)
